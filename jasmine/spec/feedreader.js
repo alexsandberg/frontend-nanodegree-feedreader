@@ -28,17 +28,20 @@ $(function() {
     describe('The menu', function() {
         // test whether menu is hidden by default
         it('is hidden by default', function() {
-            expect(document.body.classList).toContain('menu-hidden');
+            expect(document.body.classList).toContain('menu-hidden'); 
         })
 
         // test whether menu displays/hides when clicked
         it('displays/hides when clicked', function() {
             let menu = document.querySelector('.menu-icon-link');
-            if(document.body.classList.contains('menu-hidden')) {
-                expect(menu.onclick).not.toContain('menu-hidden');
-            } else {
-                expect(menu.onclick).toContain('menu-hidden');
-            }
+            
+            // simulate click, menu should NOT be hidden
+            menu.click();
+            expect(document.body.classList).not.toContain('menu-hidden');
+
+            // simulate click, menu SHOULD be hidden
+            menu.click();
+            expect(document.body.classList).toContain('menu-hidden');
         });
 
         // test suite for Initial Entries
