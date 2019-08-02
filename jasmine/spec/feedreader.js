@@ -48,9 +48,7 @@ $(function() {
         describe('Initial Entries', function() {
             // run loadFeed to completion before executing test
             beforeEach(function(done) {
-                loadFeed(0,function() {
-                    done();
-                })
+                loadFeed(0, done);
             })
             // test whether there is at least a single .entry element after loadFeed completes
             it('contains at least one entry', function() {
