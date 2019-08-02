@@ -67,10 +67,9 @@ $(function() {
                 })
             })
             // test whether content changes following loadFeed call
-            it('loads new content', function(done) {
+            it('loads new content', function() {
                 let nextEntry = document.querySelectorAll('.entry-link')[0];
                 expect(firstEntry).not.toEqual(nextEntry);
-                done();
             })
         })
     })
