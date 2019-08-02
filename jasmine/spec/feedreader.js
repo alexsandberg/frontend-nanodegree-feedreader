@@ -54,7 +54,7 @@ $(function() {
             })
             // test whether there is at least a single .entry element after loadFeed completes
             it('contains at least one entry', function() {
-                expect(document.querySelector('.entry')).toBeDefined();
+                expect(document.querySelectorAll('.feed .entry').length).toBeGreaterThan(0);
             })
         })
 
