@@ -19,7 +19,7 @@ $(function() {
         it('feed names are defined', function() {
             for(let feed of allFeeds) {
                 expect(feed.name).toBeDefined();
-                expect(feed.name).not.toBe(0);
+                expect(feed.name).not.toBe('');
             }
          });
     });
