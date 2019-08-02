@@ -11,7 +11,7 @@ $(function() {
         it('feed URLs are defined', function() {
             for(let feed of allFeeds) {
                 expect(feed.url).toBeDefined();
-                expect(feed.url).not.toBe(0);
+                expect(feed.url).not.toBe('');
             }
          });
 
